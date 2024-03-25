@@ -6,3 +6,5 @@ python-jose[cryptography]
 sqlalchemy
 passlib[bcrypt]
 python-multipart
+jose
+starlette
