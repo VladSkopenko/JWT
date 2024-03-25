@@ -1,19 +1,13 @@
 from fastapi import FastAPI, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
-from pydantic import BaseModel
-
+from model import UserModel
 
 from auth import create_access_token, get_current_user, Hash
 from db import User, get_db
 
 app = FastAPI()
 hash_handler = Hash()
-
-
-class UserModel(BaseModel):
-    username: str
-    password: str
 
 
 @app.post("/signup")

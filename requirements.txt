@@ -1,4 +1,4 @@
-
+pydantic
 fastapi
 uvicorn
 fastapi-jwt-auth
